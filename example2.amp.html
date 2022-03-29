@@ -1,0 +1,87 @@
+<!doctype html>
+<html ⚡4email>
+<head>
+<!--
+By Justin Khoo @freshinbox
+Comparison of classic interactive email and AMP for Email.
+
+Test it on the AMP playground:
+https://ampbyexample.com/playground/#runtime=amp4email
+
+-->
+  
+  <meta charset="utf-8">
+  <title>My AMP EMAIL</title>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <style amp4email-boilerplate>body{visibility:hidden}</style>
+<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <style amp-custom>
+    .wrapper{
+      padding:20px;
+    }
+    #cbox:checked ~ .rollover .main{
+      display:none;
+    }
+    .toggle{
+      display:inline-block;
+      border:2px solid #555555;
+      border-radius:5px;
+      padding:2px 5px;
+      margin:5px;
+    }
+   
+    
+    .rollover{
+      height:200px;
+      width:260px;
+      border:2px solid black;
+      overflow:hidden;
+    }
+    .rollover:hover .main{
+      display:none;
+    }
+    
+    
+    .amp-carousel{
+      width:300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+  <h2>Hello, I am an AMP EMAIL!</h2>
+  
+  <B>Classic interactive email using CSS :checked and :hover</B><BR>
+  Rollover image or trigger checkbox (<a href="https://freshinbox.com/resources/techniques.php">Examples</a>)<BR><BR>
+  
+  <input type="checkbox" id="cbox"><label class="toggle" for="cbox">Toggle checkbox</label>
+  <div class="rollover">
+  <amp-img class="main" src="https://freshinbox.com/tools/rollover/images/shoe-rollover.jpg" height="200" width="260"></amp-img>
+  <amp-img src="https://freshinbox.com/tools/rollover/images/shoe-rollover-alt.jpg" height="200" width="260"></amp-img>
+  </div>
+<BR><BR>
+  <HR>
+  <B>AMP for Email interactive email using <a href="https://www.ampproject.org/docs/reference/components/amp-carousel">AMP carousel</a></B>  
+  
+  
+  <amp-carousel class="amp-carousel" height="200"
+  layout="fixed-height"
+  type="carousel">
+  <amp-img src="https://freshinbox.com/tools/rollover/images/1.jpg"
+    width="300"
+    height="200"
+    alt="a sample image"></amp-img>
+  <amp-img src="https://freshinbox.com/tools/rollover/images/2.jpg"
+    width="300"
+    height="200"
+    alt="another sample image"></amp-img>
+  <amp-img src="https://freshinbox.com/tools/rollover/images/3.jpg"
+    width="300"
+    height="200"
+    alt="another sample image"></amp-img>    
+</amp-carousel>
+    
+    </div><!-- end wrapper -->
+</body>
+</html>
+
